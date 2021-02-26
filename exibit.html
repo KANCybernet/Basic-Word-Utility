@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC>
+<html lang="en">
+
+<head>
+    <title>Utility Page</title>
+    <meta charset="utf-8" content="text/html" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="main.css~ddf52085bfa268a69ce52b07c03aa888" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" /> //
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body id="beginning">
+    <div id="app">
+        <header class="container primaryheader"><time>Current Time <span name="time"></span></time>
+            <h1>WELCOME TO THE TEXT UTILITY PAGE.</h1>
+            <p class="instruction">Please select one of the options to the left to begin.</p>
+            <div class="navigator"><button class="navicon animated" role="button"><span></span><span></span><span></span></button></div>
+        </header>
+        <section class="floated-info">
+            <aside class="col-1-3 animated optionbox">
+                <ul id="options" data-default_color="orange" data-active_color="#8080C0">
+ <!--                   <li class="option-item" style=" font-size:18px;">
+                        <a class="option-link">find the average word length</a></li>-->
+                    <li class="option-item is-active-option-item" style=" font-size:18px;">
+                        <a class="option-link">Find the most frequent word</a></li>
+                    <li class="option-item" style=" font-size:18px;">
+                        <a class="option-link">find the longest words</a></li>
+                    <li class="option-item" style=" font-size:18px;">
+                        <a class="option-link">count the number of words</a></li>
+                </ul>
+                <hr /><button class="navigate"><a data-action="showMore"
+                        href="javascript:void(0)">More&gt;&gt;</a></button>
+            </aside>
+            <div class="col-2-3" id="display">
+                Result Goes Here</div>
+            <div class="col-1-3" id="instructions" style=" font-size:18px;">Please read the instructions carefully: Select Utility On The Left Side List</div>
+        </section>
+        <section class="container">
+            <section class="argumentForms" style="text-align: center; color:white;">
+                <div style="color: white; text-align: center;">NO UTILITY SELECTED YET
+                </div>
+            </section>
+        </section>
+
+    </div>
+</body>
+
+</html>

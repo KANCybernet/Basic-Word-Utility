@@ -1,0 +1,398 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* _______________________________________
+
+             My Styles Begin Here
+   _______________________________________ */
+
+/*_________________________
+     General
+___________________________ */
+*,*:before,*:after{
+	box-sizing: border-box;
+	transition: 0.5s ease;
+}
+.makeblock{
+	display: block;
+}
+@keyframes slide_left_right{
+	0%{
+		left: 0%;
+	}
+	100%{
+		left: 10%;
+	}
+}
+@font-face{
+  font-family: "heavy heap";
+  font-weight: 100; 
+  src: url("/fonts/heavy heap.ttf");
+}
+@font-face{
+  font-family: "sassoon";
+  src: url("/fonts/sassoonPrimaryStd-Bold.otf");
+}
+.container{
+	width: 80%;
+	padding-left:10%;
+	padding-right: 10%;
+	margin: auto;
+}
+
+body{
+	font-family: sans-serif, Helvetica, Arial;
+	color: maroon;
+	height: 100%;
+	width: 100%;
+	font-size: 200%;
+	background: radial-gradient(rgb(2,8,64),rgb(72,36,100));
+    /*zoom: 1.11;*/
+}
+time{
+float:right;
+font-weight:200;
+font-size: 65%;
+color: brown
+}
+
+.clearfix:after,.clearfix:before{
+	content: "";
+	display: table;
+	clear: both;
+}
+.clearfix{
+	clear: both;
+}
+
+.showmore{
+		font-style: oblique;
+}
+/*________________________
+     Header
+  ________________________*/
+.primaryheader{
+	margin-bottom: 2em;
+}
+h1{
+	text-align:  center;
+	line-height: 1.3em;
+	font: 100 1.1em "sassoon", helvetica;
+	font-variant:small-caps;
+	text-shadow: 0.03em 0.04em 0.02em rgba(255,117,51,1);
+}
+
+/*________________________
+      Grid
+ _________________________*/
+ @media screen and (min-width:635px){
+	h1{
+		line-height: 1.3em;
+		word-spacing: 1.1em;
+		text-align: center;
+		font-size: 1.3em;
+	}
+	.col-1-3{
+		margin:20px 0 0 18px;
+		width: 22%;
+  		display: inline-block;
+ 		height:10em;
+  		padding: 1%;
+  		vertical-align: top;
+  		font-size: 58%
+	}
+	.col-2-3{
+ 		width:49%;
+ 		height: 10rem;
+ 		display: inline-block;
+ 		padding: 1%;
+ 		vertical-align:top;
+	 }
+	 .navigate{
+	   background: inherit;
+	   margin:0;
+	   padding:0;
+	   border: none;
+	   font: inherit;
+   }
+	 .navigator{
+		 display: none;
+	 }
+ }
+
+/*_______________________
+     Menu
+  ______________________*/
+
+ul{
+	list-style-type: disc;
+	text-align: left;
+}
+.option-link, .option-item{
+	color:orange;
+	cursor: pointer;
+}
+.option-link{
+	text-decoration: none;
+}
+.option-link:hover, .option-item:hover{
+	color:gold;
+}
+.is-active-option-item, .is-active-option-item .option-link{
+	color:#8080C0  !important;
+}
+.navigate{
+	position: relative;
+	color: rgba(150,0,136,1) /*rgba(0,10,132,1)*/;
+	font-style: italic;
+	font-weight: bold;
+	animation: 0.5s ease-in-out 3s infinite alternate slide_left_right;
+}
+
+/*_______________________
+    Instructions
+ _______________________*/
+#instructions {
+	color: rgb(105,118,124);
+}
+
+/*_______________________
+    display
+  _______________________*/
+#display {
+	/* font-size: 0px; */
+	text-align: center;
+	border: 10px groove rgba(79, 97, 125, 0.3);
+	border-radius: 15%;
+	box-shadow: 5px -7px 10px rgb(64,0,0) inset;
+	background: repeating-radial-gradient( ellipse closest-corner at 50%, rgba(30, 15, 100, 0.8) 60%, rgba(75, 12, 86, 0.7)) scroll 100% 30%;
+	overflow: auto;
+}
+#display>*{
+	vertical-align: middle;
+	line-height: 1em;
+	font-size: 2.3rem;
+	color: #BCBCBC;
+}
+
+/*_______________________
+      Evaluator forms
+ ________________________*/
+ is-button-waiting{
+	 cursor : wait;
+ }
+input:focus{
+    background:rgba(250,255,190,0.9);
+ }
+input:disabled, button:disabled, select:disabled{
+	opacity: 0.75;
+}
+input:invalid{
+	color:red;
+}
+.evaluator{
+	color:white;
+	
+	background: rgba(0,128,64,1);
+	border: 0.2em double rgb(64,128,128);
+}
+.evaluator:hover{
+	background-color: rgba(132,10,132,1);
+	border: 0.2em double rgb(152,20,155);
+}
+#baseForm input{
+	width:13.5%;
+}
+
+
+
+/*_______________________
+     Footer
+  ______________________*/
+small{
+	float: left;
+}
+
+@media screen and (max-width:634px){
+	body{
+		zoom: normal;
+	}
+	.primaryheader{
+	background: radial-gradient(rgb(72,36,100),rgb(2,8,64));
+	z-index: 2;
+	position: relative;
+	margin-bottom: 0;
+	height: 3.85em;
+	}
+	input{
+		width: 80vw;
+		height: 2em;
+		margin-bottom: 10px;
+	}
+	button, input, legend, label{
+		display: block;
+		margin: auto;
+		text-align: center;
+	}
+	label{
+		margin-bottom: 5px;
+	}
+	h1{
+	line-height: 1;
+	font-size: 1.01em;
+	}
+	#display{
+		border-radius:0;
+	}
+	.container{
+		width: 100%;
+		padding:0;
+
+	}
+	#display{
+		width: 100%;
+		height: 10rem;
+		margin-bottom: 40px;
+	}
+	.optionbox{
+		-webkit-transform: translate(0,-150%);
+  		-moz-transform: translate(0,-200%); 
+  		transform: translate(0,-150%);
+ 		position: absolute; 
+	}
+	.instruction, #instructions {
+		display: none;
+	}
+	time{
+		float: none;
+		display: block;
+		width: 100%;
+		text-align: right;
+		color: grey;
+	}
+ .navicon{
+  border-radius: 36%;
+  height: 3em;
+  display: inline-block;
+}
+.navicon *{
+  display: inline-block;
+}
+.navicon span{
+  display: block;
+  height: 14%;
+  border-radius: 15%;
+  background: brown;
+  width: 2.9em;
+  background-clip: content-box;
+  margin: 13% auto;
+}
+
+.navicon.showing span:nth-child(1){
+  -webkit-transform: rotate(-50deg) translate(-19%,150%);
+  -moz-transform: rotate(-50deg) translate(-19%,150%);
+  transform: rotate(-50deg) translate(-22%,150%);
+}
+.navicon.showing span:nth-child(3){
+  -moz-transform: rotate(50deg) translate(-19%,-150%);
+  -webkit-transform: rotate(50deg) translate(-19%,-150%);
+  transform: rotate(50deg) translate(-19%,-150%);
+}
+.navicon.showing span:nth-child(2){
+  visibility: hidden;
+  -moz-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}
+.navigator{
+	height: 1.45em;
+}
+.optionbox{
+	height: 10.5em;
+	display: block;
+		font-size: 0.9em;
+	background: black;
+}
+.optionbox.showing{
+	/*-webkit-transform: translate(0,-22%);
+	-moz-transform: translate(0,-22%); 
+	transform: translate(0,0%);*/
+	-webkit-transform: none;
+	-moz-transform: none; 
+	transform: none;
+}
+.optionbox li{
+	margin-bottom: 10px;
+}
+.navigate{
+	animation: none;
+}
+
+/*.optionbox.showing .navigate{
+	animation: 0.5s ease-in-out 3s infinite alternate slide_left_right;
+}*/
+.argumentForms{
+	font-size: 0.8em;
+	font-weight: 600;
+}
+small{
+	font-size: 0.7em;
+}
+
+}
+time span{
+	color:green;  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
